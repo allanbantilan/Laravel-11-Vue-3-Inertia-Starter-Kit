@@ -24,7 +24,7 @@ const props = defineProps({
         <input
             :type="type"
             :id="label"
-            class="w-full p-3 border rounded-lg"
+            class="w-full p-3 border rounded-lg flex-1"
             :placeholder="placeholder"
             v-model="model"
         />

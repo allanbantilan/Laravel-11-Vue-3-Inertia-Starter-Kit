@@ -26,7 +26,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
 
             // Redirect to intended page or home
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
         }
 
         // If authentication fails, redirect back with an error message

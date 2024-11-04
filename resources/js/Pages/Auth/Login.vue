@@ -21,14 +21,16 @@ const submit = () => {
 
 <template>
     <Container>
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
+        <div
+            class="bg-white p-12 rounded-lg shadow-lg max-w-lg mx-auto w-full sm:max-w-xl"
+        >
             <Title title="Login" />
 
             <p class="flex items-center justify-center mb-4">
-                Dont have an Account? 
+                Don't have an Account?
                 <TextLink routeName="register" label="Register Here" />
             </p>
-            <hr class="mb-2">
+            <hr class="mb-2" />
             <ErrorMessages :errors="form.errors" />
             <form @submit.prevent="submit">
                 <InputField
@@ -46,8 +48,8 @@ const submit = () => {
                     v-model="form.password"
                 />
 
-                <div class="flex items-center justify-end">
-                    <Button>Register</Button>
+                <div class="flex items-center justify-end mt-4">
+                    <Button>Login</Button>
                 </div>
             </form>
         </div>

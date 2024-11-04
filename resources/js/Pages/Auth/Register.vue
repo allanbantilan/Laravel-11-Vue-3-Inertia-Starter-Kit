@@ -23,7 +23,9 @@ const submit = () => {
 
 <template>
     <Container>
-        <div class="bg-white p-8 rounded-lg shadow-lg max-w-md mx-auto">
+        <div
+            class="bg-white p-12 rounded-lg shadow-lg max-w-md mx-auto overflow-hidden"
+        >
             <Title title="Register" />
             <p class="flex items-center justify-center mb-4">
                 Already have an Account?
@@ -32,7 +34,10 @@ const submit = () => {
             <hr class="mb-2" />
 
             <ErrorMessages :errors="form.errors" />
-            <form @submit.prevent="submit">
+            <form
+                @submit.prevent="submit"
+                class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+            >
                 <InputField
                     type="text"
                     label="Name"
@@ -47,22 +52,29 @@ const submit = () => {
                     icon="fas fa-envelope"
                     v-model="form.email"
                 />
-                <InputField
-                    type="password"
-                    label="Password"
-                    placeholder="Enter your password"
-                    icon="fas fa-lock"
-                    v-model="form.password"
-                />
-                <InputField
-                    type="password"
-                    label="Confirm Password"
-                    placeholder="Confirm your password"
-                    icon="fas fa-lock"
-                    v-model="form.password_confirmation"
-                />
 
-                <div class="flex items-center justify-end">
+                <div class="border-t border-gray-300 pt-4 mt-4 sm:mt-0">
+                    <InputField
+                        type="password"
+                        label="Password"
+                        placeholder="Enter your password"
+                        icon="fas fa-lock"
+                        v-model="form.password"
+                    />
+                </div>
+                <div class="border-t border-gray-300 pt-4 mt-4 sm:mt-0">
+                    <InputField
+                        type="password"
+                        label="Confirm Password"
+                        placeholder="Confirm password"
+                        icon="fas fa-lock"
+                        v-model="form.password_confirmation"
+                    />
+                </div>
+                <!-- Full-width button spanning two columns -->
+                <div
+                    class="flex items-center justify-end col-span-1 sm:col-span-2 mt-4"
+                >
                     <Button>Register</Button>
                 </div>
             </form>
