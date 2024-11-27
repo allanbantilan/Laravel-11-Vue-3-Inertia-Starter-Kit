@@ -22,7 +22,7 @@ const submit = () => {
 <template>
     <Container>
         <div
-            class="bg-white p-12 rounded-lg shadow-lg max-w-lg mx-auto w-full sm:max-w-xl"
+            class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto w-full sm:max-w-xl"
         >
             <Title title="Login" />
 
