@@ -24,7 +24,7 @@ const submit = () => {
 <template>
     <Container>
         <div
-            class="bg-white p-12 rounded-lg shadow-lg max-w-md mx-auto overflow-hidden"
+            class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto w-full sm:max-w-xl"
         >
             <Title title="Register" />
             <p class="flex items-center justify-center mb-4">
